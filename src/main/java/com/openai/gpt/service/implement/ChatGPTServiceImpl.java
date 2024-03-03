@@ -75,7 +75,6 @@ public class ChatGPTServiceImpl implements ChatGPTService {
 
   /**
    * ChatGTP 프롬프트 검색
-   * TODO : 에러 고치기
    *
    * @param completionRequestDto
    * @return
