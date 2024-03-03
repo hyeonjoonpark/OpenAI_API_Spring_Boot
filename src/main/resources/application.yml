@@ -1,6 +1,6 @@
 openai:
   model: davinci-002
-  secret-key: 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
+  secret-key: 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
 
 server:
   servlet:

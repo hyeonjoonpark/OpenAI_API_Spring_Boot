@@ -111,7 +111,7 @@ public class ChatGPTServiceImpl implements ChatGPTService {
     ResponseEntity<String> response = gptConfig.restTemplate()
       .exchange(
         "https://api.openai.com/v1/completions",
-        HttpMethod.GET,
+        HttpMethod.POST,
         requestEntity,
         String.class
       );
@@ -128,7 +128,6 @@ public class ChatGPTServiceImpl implements ChatGPTService {
 
   /**
    * 모델이 유효한지 확인하는 비즈니스 로직
-   * TODO: 에러 고치기
    *
    * @param modelName
    * @return
@@ -146,7 +145,7 @@ public class ChatGPTServiceImpl implements ChatGPTService {
     // [STEP2] 통신을 위한 RestTemplate을 구성합니다.
     ResponseEntity<String> response = gptConfig.restTemplate()
       .exchange(
-        "https://api.openai.com/v1/models" + modelName,
+        "https://api.openai.com/v1/models/" + modelName,
         HttpMethod.GET,
         new HttpEntity<>(headers),
         String.class
