@@ -1,0 +1,22 @@
+openai:
+  model: davinci-002
+  secret-key: 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
+
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gpt?serverTimezone=UTC&characterEncoding=UTF-8
+    hikari:
+      username: root
+      password: phj@3473
+
+  main:
+    allow-bean-definition-overriding: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
